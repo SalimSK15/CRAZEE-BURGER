@@ -9,9 +9,7 @@ export default function LoginForm() {
    // comporetement
    const handleSubmit = (e) => {
      e.preventDefault();
-     if(prenom.trim() !== ""){
-      navigate( "/OrderPage",{state: {prenom}})
-     }
+     navigate( "/OrderPage",{state: {prenom}})
    }
    const handleChange = (e) => {
      setPrenom(e.target.value); 
