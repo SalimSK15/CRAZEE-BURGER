@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useNavigate   } from 'react-router-dom';
+import { useNavigate   } from 'react-router-dom';
 
 export default function LoginForm() {
     //state
@@ -9,7 +9,7 @@ export default function LoginForm() {
    // comporetement
    const handleSubmit = (e) => {
      e.preventDefault();
-     navigate( "/OrderPage",{state: {prenom}})
+     navigate( `/order/${prenom}`)
    }
    const handleChange = (e) => {
      setPrenom(e.target.value); 
@@ -23,7 +23,6 @@ export default function LoginForm() {
       <h2>Connectez-vous</h2>
       <input onChange={handleChange} value={prenom } type="text" placeholder="Entrez votre prénom ..." required/>
       <button>Accédez à votre espace</button>
-      <Link to="/order">Vers OrderPage</Link>
     </form>
   )
 }

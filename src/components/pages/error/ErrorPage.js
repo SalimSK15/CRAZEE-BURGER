@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function ErrorPage() {
   return (
    <div>
-      <h1>Order Page</h1>
+      <h1>Error Page</h1>
       <Link to="/">
          <button>Retourner vers la page d'accueil</button>
       </Link>
