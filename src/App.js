@@ -1,10 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import OrderPage from './components/pages/Order/OrderPage';
+import ErrorPage from './components/pages/error/ErrorPage';
 import LoginPage from './components/pages/login/LoginPage';
+import {Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <LoginPage />
+    <div>
+      <Routes>
+        <Route path="/" element={<LoginPage />}/>
+        <Route path="/order/:userName" element={ <OrderPage />}/>
+        <Route path="*" element={ <ErrorPage />} />
+      </Routes>
+    </div>
+    
   );
 }
 
