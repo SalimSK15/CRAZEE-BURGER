@@ -4,10 +4,15 @@ import Logo from "../../reusable-ui/Logo";
 
 export default function LoginPage() {
 
+
+  const handleLogoClick = () => {
+    window.location.reload();
+  }
+
   // affichage (render)
   return (
     <LoginPageStyled>
-      <Logo />
+      <Logo className="logo-login-page" onClick={handleLogoClick}/>
       <LoginForm />
     </LoginPageStyled>
   )
@@ -21,8 +26,7 @@ const LoginPageStyled = styled.div`
 
   &::before{
     content: "";
-    background: url("/images/F03-burger-background.jpg") 
-    rgba(0, 0, 0, 0.7);
+    background: url("/images/F03-burger-background.jpg") rgba(0, 0, 0, 0.7);
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;
@@ -34,5 +38,8 @@ const LoginPageStyled = styled.div`
     // right: 0;
     // bottom: 0;
     z-index: -1;
+  }
+  .logo-login-page{
+    transform: scale(2.5);
   }
 `
