@@ -3,9 +3,9 @@ import { useNavigate   } from 'react-router-dom';
 import { styled } from 'styled-components';
 import { BsPersonCircle } from 'react-icons/bs';
 import TextInput from '../../reusable-ui/TextInput';
-import PrimaryButton from '../../reusable-ui/PrimaryButton';
 import { IoChevronForward} from "react-icons/io5";
 import { theme } from '../../../theme';
+import PrimaryButton from '../../reusable-ui/PrimaryButton';
 
 export default function LoginForm() {
     //state
@@ -67,6 +67,33 @@ const LoginFormStyled = styled.form`
     margin: 20px 10px 10p;
     color: ${theme.colors.white};
     font-size: ${theme.fonts.size.P4};
+  }
+  .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:${theme.fonts.size.P0};
+    margin-left: 10px;
+    // font-size: 15px;
+    // margin-right: 8px;
+    // color: #93a2b1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    margin-left: 10px;
+  }
+  input{
+    border: none;
+    font-size: 15px;
+    color: #17161a;
+  }
+  &::placeholder{
+    background: white;
+    color: lightgrey;
+  }
+    color: white;
+    font-size: 36px;
   }
   .icon{
     display: flex;
