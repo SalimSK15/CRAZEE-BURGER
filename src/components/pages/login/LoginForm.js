@@ -9,7 +9,7 @@ import PrimaryButton from '../../reusable-ui/PrimaryButton';
 
 export default function LoginForm() {
     //state
-   const [prenom, setPrenom] = useState("");
+   const [prenom, setPrenom] = useState("salim");
    const navigate   = useNavigate();
 
    // comporetement 

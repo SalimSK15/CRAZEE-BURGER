@@ -9,7 +9,7 @@ function TextInput({value,onChange,Icon,...restProps}) {
          {Icon && Icon}
          <input 
             onChange={onChange} 
-            value={value } 
+            value={value} 
             {...restProps}
             type="text" 
         />
